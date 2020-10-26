@@ -129,4 +129,14 @@ export class Cells {
     }
     return true
   }
+
+  toString () {
+    const dataStr = this.data.reduce((acc, cell, index) => {
+      if (index > 0 && index % this.xCount === 0) {
+        return `${acc}\n${cell}`
+      }
+      return `${acc}${cell}`
+    }, '')
+    return dataStr
+  }
 }

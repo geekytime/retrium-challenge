@@ -11,9 +11,21 @@ test('Cells - basic functionality', (t) => {
   t.equal(cells.get(3, 3), 0)
   t.equal(cells.get(1, 1), 1)
   t.equal(cells.get(-1, -1), -1)
-
   cells.set({ x: 1, y: 0, newValue: 1 })
   t.equal(cells.get(1, 0), 1)
+  t.end()
+})
+
+test('Cells - toString', (t) => {
+  const cells = new Cells(block)
+  const str = cells.toString()
+  const expected = `
+0000
+0110
+0110
+0000
+`.trim()
+  t.equal(str, expected, 'toString')
   t.end()
 })
 
