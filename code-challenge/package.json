@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "Retrium developer code challenge",
 	"scripts": {
+		"cli": "node -r esm ./cli/life.js",
 		"lint": "eslint .",
 		"start": "nodemon --exec babel-node src/game.js",
 		"test": "tape -r esm 'src/**/*.test.js'"
@@ -34,6 +35,10 @@
 		"esm": "^3.2.25",
 		"nodemon": "^2.0.3",
 		"prettier": "^1.18.2",
-		"tape": "^5.0.1"
+		"tape": "^5.0.1",
+		"terminal-kit": "^1.44.0"
+	},
+	"dependencies": {
+		"chance": "^1.1.7"
 	}
 }
