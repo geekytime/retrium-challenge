@@ -1,0 +1,26 @@
+.Life {
+  @size: 10px;
+  margin-top: @size;
+
+  .row {
+    display: block;
+    height: @size;
+
+    .cell {
+      display: inline-block;
+      width: @size;
+      height: @size;
+      margin: 0;
+      padding: 0;
+      border-radius: 2px;
+
+      &.alive {
+        background-color: green;
+      }
+
+      &.dead {
+        background-color: transparent;
+      }
+    }    
+  }
+}
